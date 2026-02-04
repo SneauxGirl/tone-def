@@ -4,6 +4,13 @@ A coding-focused typing practice tool that provides musical feedback based on fi
 
 Created using Claude to meet my personal desire for code-centric typing practice with auditory feedback.
 
+## How to Use
+
+1. Open `index.html` in your web browser (drag file to browser window or icon, or right click to "Open With")
+2. Click "Start Practice" for general coding practice or "Right Pinky Drill" for focused practice
+3. Type the characters shown on screen
+4. Listen to the tonal feedback and watch your accuracy improve!
+
 ## Decisions along the way
 
 - **Browser-based**: Keyboard practice requires a browser and keeps the project easy to mod
@@ -35,12 +42,6 @@ Created using Claude to meet my personal desire for code-centric typing practice
 
 - **Most Control Keys**: Ctrl, Opt, Alt, Home, End, Esc, Arrows, Page Up/Down, Caps Lock, Tab, Backspace/Delete
 
-## How to Use
-
-1. Open `index.html` in your web browser
-2. Click "Start Practice" for general coding practice or "Right Pinky Drill" for focused practice
-3. Type the characters shown on screen
-4. Listen to the tonal feedback and watch your accuracy improve!
 
 ## File Structure
 
@@ -85,7 +86,7 @@ Edit `style.css` to modify. The main colors are:
 Modify the audio envelope in the `playTone()` function:
 ```javascript
 gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.4); // Duration
-```
+
 
 ## GitHub Setup
 
