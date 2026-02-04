@@ -4,9 +4,10 @@ A coding-focused typing practice tool that provides musical feedback based on fi
 
 Created using Claude to meet my personal desire for code-centric typing practice with auditory feedback.
 
-## How to Use
+## How to Use (Outside Vercel)
 
-1. Open `index.html` in your web browser (drag file to browser window or icon, or right click to "Open With")
+1. Download repositoty and extract 
+2. Open `index.html` in your web browser
 2. Click "Start Practice" for general coding practice or "Right Pinky Drill" for focused practice
 3. Type the characters shown on screen
 4. Listen to the tonal feedback and watch your accuracy improve!
