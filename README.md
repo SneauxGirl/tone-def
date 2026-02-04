@@ -1,6 +1,18 @@
 # Tone Def
 
-A coding-focused typing practice tool that provides musical feedback based on finger position. Strengthen your code typing technique with tonal feedback
+A coding-focused typing practice tool that provides musical feedback based on finger position. Strengthen your code typing technique with tonal feedback.
+
+Created using Claude to meet my personal desire for code-centric typing practice with auditory feedback.
+
+## Decisions along the way
+
+- **Browser-based**: Keyboard practice requires a browser and keeps the project easy to mod
+- **Note-Mapping**: Notes per finger rather than per key. Unique undertone for shift. Removed tone for space. Split right pinkie keys into two tones for more accurate feedback about r-l movement
+- **Sound Preferences**: Lower resonance accent sounds provide less distraction from primary keystroke tones
+- **Sound Mode**: open source sound libraries
+- **Targeted Code and Pinkie Characters**: frequently unavailale on standard practice sites
+- **Multi-Line Content**: first iteration revealed one character or phrase at a time. Absolutely not
+- **Fixes**: Primarily sound balance, unmapped characters, and escaping characters that were not completely mapped
 
 ## Features
 
