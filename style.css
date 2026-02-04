@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Monaco', 'Courier New', monospace;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.practice-area {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    min-height: 150px;
+    line-height: 2;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.current-char {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #667eea;
+    text-underline-offset: 4px;
+}
+
+.typed-chars {
+    color: #999;
+}
+
+.upcoming-chars {
+    color: #333;
+}
+
+.next-strings {
+    display: none;
+}
+
+.feedback {
+    font-size: 1.2em;
+    margin-top: 20px;
+    min-height: 30px;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    color: #305224;
+}
+
+.feedback.incorrect {
+    color: #bb522c;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Monaco', 'Courier New', monospace;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #764ba2;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #653a8e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+}
+
+.mode-info {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    color: #1976d2;
+    font-size: 0.9em;
+}
+
+.finger-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 0.85em;
+}
+
+.hand {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hand h3 {
+    margin-bottom: 10px;
+    color: #667eea;
+}
+
+.finger-group {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.finger-name {
+    font-weight: bold;
+    color: #764ba2;
+}
