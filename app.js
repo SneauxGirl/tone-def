@@ -50,7 +50,8 @@ const keyToFinger = {
     
     // Special keys
     'Meta': 'special', // Command key
-    ' ': 'space' // Space bar
+    ' ': 'space', // Space bar
+    '\n': 'rightPinky', // Enter/Return - edit to 'space' for silent return
 };
 
 // Coding string patterns
@@ -282,10 +283,28 @@ function handleKeyPress(event) {
     }
     
     // Check if we should ignore this key
-    if (key === 'Tab' || key === 'Enter' || key === 'Backspace' || 
-        key === 'CapsLock' || key === 'Control' || key === 'Alt' || 
-        key === 'Option' || key.startsWith('Arrow') || key === 'Escape') {
+    if (key === 'Tab' ||  key === 'Backspace' || key === 'CapsLock' ||
+        key === 'Control' || key === 'Alt' || key === 'Option' ||
+        key.startsWith('Arrow') || key === 'Escape') {
         return;
+    }
+
+    // Handle Enter key - only convert to newline if that's what's expected
+    const expectedChar = currentBlock[currentPosition];
+    let actualKey = key;
+
+    if (key === 'Enter') {
+        if (expectedChar === '\n') {
+            actualKey = '\n'; // TRUE: Convert Enter to newline only if newline is expected
+        } else {
+            // FALSE: Wrong key - Enter pressed but newline not expected
+            mistakeCount++;
+            playTone('rightPinky', false);
+            document.getElementById('feedback').textContent = `✗ Expected: "${expectedChar}"`;
+            document.getElementById('feedback').className = 'feedback incorrect';
+            updateDisplay();
+            return; // ERROR and no action - stops execution here and circles back to await next handleKeyPress event
+        }
     }
     
     // Handle Command/Meta key
@@ -295,16 +314,16 @@ function handleKeyPress(event) {
         return;
     }
     
-    const finger = keyToFinger[key];
+    const finger = keyToFinger[actualKey];
     
     // If we don't track this key, ignore it
     if (!finger) return;
     
     event.preventDefault();
     
-    const expectedChar = currentBlock[currentPosition];
+  // removed expectedChar - already declared above
     
-    if (key === expectedChar) {
+    if (actualKey === expectedChar) {
         // Correct!
         correctCount++;
         playTone(finger, true);
