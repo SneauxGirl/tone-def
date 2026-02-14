@@ -161,22 +161,34 @@ function playTone(finger, isCorrect = true) {
         return;
     }
     
-    // Correct key - melodic tone
-    const midiNote = fingerPitches[finger];
-    const frequency = 440 * Math.pow(2, (midiNote - 69) / 12);
-    
-    // Determine waveform based on hand
-    const isLeftHand = finger.startsWith('left');
-    oscillator.type = isLeftHand ? 'sine' : 'triangle'; // Warm vs bright
-    
-    oscillator.frequency.setValueAtTime(frequency, now);
-    
-    // Envelope
-    gainNode.gain.setValueAtTime(0, now);
-    gainNode.gain.linearRampToValueAtTime(0.3, now + 0.02);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
-    
-    oscillator.connect(gainNode);
+// Correct key - retro computer beep
+const isLeftHand = finger.startsWith('left');
+
+// Frequency mapping: 400, 600, 800, 1000, 1200 Hz
+const fingerFrequencies = {
+    leftPinky: 400,
+    leftRing: 600,
+    leftMiddle: 800,
+    leftIndex: 1000,
+    rightIndex: 1000,
+    rightMiddle: 800,
+    rightRing: 600,
+    rightPinky: 400
+};
+
+const frequency = fingerFrequencies[finger];
+
+// Left hand: Terminal beep (square wave)
+// Right hand: DOS beep (sawtooth wave)
+oscillator.type = isLeftHand ? 'square' : 'sawtooth';
+
+oscillator.frequency.setValueAtTime(frequency, now);
+
+// Sharp envelope - instant attack, quick cutoff
+gainNode.gain.setValueAtTime(0.4, now);
+gainNode.gain.setValueAtTime(0, now + 0.05);
+
+oscillator.connect(gainNode);
     gainNode.connect(audioContext.destination);
     
     oscillator.start(now);
