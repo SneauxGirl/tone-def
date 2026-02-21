@@ -270,6 +270,9 @@ function startPractice(mode) {
     
     // Generate first 4-line block
     currentBlock = generateNewBlock();
+
+    // Focus hidden input to trigger mobile keyboard
+    document.getElementById('mobileInput').focus();
     
     const modeText = mode === 'pinky' 
         ? '🎯 Right Pinky Drill Mode - Focus on: 0 ) - _ = + P [ { ] } \\ | ; : \' " / ?'
@@ -386,6 +389,13 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 
 document.addEventListener('keydown', handleKeyPress);
 document.addEventListener('keyup', handleKeyUp);
+
+// Click to refocus keyboard on mobile
+document.getElementById('prompt').addEventListener('click', () => {
+    if (isActive) {
+        document.getElementById('mobileInput').focus();
+    }
+});
 
 // Initialize
 updateDisplay();
