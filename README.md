@@ -6,7 +6,7 @@ Created using Claude to meet my personal desire for code-centric typing practice
 
 ## How to Use (Outside Vercel)
 
-1. Download repositoty and extract 
+1. Download repository and extract 
 2. Open `index.html` in your web browser
 2. Click "Start Practice" for general coding practice or "Right Pinky Drill" for focused practice
 3. Type the characters shown on screen
@@ -120,7 +120,7 @@ Works best in modern browsers with Web Audio API support:
 
 ## License
 
-Feel free to use, modify, and share!
+Standard MIT license for Open Source.
 
 ## Contributing
 
