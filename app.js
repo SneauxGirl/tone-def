@@ -204,7 +204,7 @@ function generateNextString() {
     const filtered = isMobile 
     ? patterns.filter(p => !p.includes('`') && !p.includes('$'))
     : patterns;
-    return patterns[Math.floor(Math.random() * patterns.length)];
+    return filtered[Math.floor(Math.random() * filtered.length)];
 }
 
 // Generate a new 4-line block
