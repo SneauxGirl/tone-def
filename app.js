@@ -195,9 +195,15 @@ oscillator.connect(gainNode);
     oscillator.stop(now + 0.4);
 }
 
+//remove ` for mobile devices
+const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+
 // Generate next string
 function generateNextString() {
     const patterns = currentMode === 'pinky' ? rightPinkyPatterns : codingPatterns;
+    const filtered = isMobile 
+    ? patterns.filter(p => !p.includes('`') && !p.includes('$'))
+    : patterns;
     return patterns[Math.floor(Math.random() * patterns.length)];
 }
 
