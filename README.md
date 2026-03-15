@@ -63,6 +63,6 @@ gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.4); // Duration
 
 ## License
 
-MIT License
+Standard MIT license for Open Source 
 
 Have fun and happy typing! 🎵⌨️
