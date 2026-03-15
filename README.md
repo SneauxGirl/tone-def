@@ -4,7 +4,7 @@ A coding-focused typing practice tool that provides musical feedback based on fi
 
 Created using Claude to meet my personal desire for code-centric typing practice with auditory feedback.
 
-![Tone Def Screenshot](public/tone-def.png)
+![Tone Def Screenshot](images/tone-def.png)
 
 ## How to Use (Outside Vercel)
 
