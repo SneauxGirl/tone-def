@@ -9,6 +9,29 @@
 </head>
 <body>
     <div class="container">
+        <a
+            class="github-link corner-github-link"
+            href="https://github.com/SneauxGirl/tone-def"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Tone Def on GitHub"
+            title="Open Tone Def on GitHub"
+        >
+            <svg
+                class="github-logo"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <path d="M9 19c-4 1.2-4-2-6-2"></path>
+                <path d="M15 22v-3.1a3.3 3.3 0 00-.9-2.6c3 0 6-1.4 6-6.4A5 5 0 0019 6.7 4.6 4.6 0 0019 3s-1.2-.4-4 1.5a13.8 13.8 0 00-6 0C6.2 2.6 5 3 5 3a4.6 4.6 0 000 3.7A5 5 0 003 9.9c0 5 3 6.4 6 6.4a3.3 3.3 0 00-.9 2.6V22"></path>
+            </svg>
+        </a>
         <h1>Tone Def</h1>
         <div class="subtitle">Learn code fingering with tonal feedback</div>
         
@@ -43,8 +66,10 @@
             Choose a practice mode to begin
         </div>
         
-        <details style="margin-top: 20px;">
-            <summary style="cursor: pointer; font-weight: bold; margin-bottom: 10px;">📋 Finger Mapping Guide</summary>
+        <details class="finger-mapping-details">
+            <summary class="finger-mapping-summary">
+                <span>📋 Finger Mapping Guide</span>
+            </summary>
             <div class="finger-guide">
                 <div class="hand">
                     <h3>Left Hand 🎹</h3>
@@ -62,6 +87,10 @@
                 </div>
             </div>
         </details>
+
+        <div class="signature-footer" aria-label="Heather Hugo signature">
+            <img src="images/hhugo-signature.png" alt="Heather Hugo signature" class="signature-image">
+        </div>
     </div>
 
     <script src="app.js"></script>

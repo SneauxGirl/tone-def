@@ -15,12 +15,20 @@ body {
 }
 
 .container {
+    position: relative;
     background: radial-gradient(ellipse at center, rgba(246,244,239, 0.95) 0%, rgba(243,233,223, 0.90) 30%, rgba(228,229,240, 0.85) 70%, rgba(210,215,235, 0.80) 100%);
     border-radius: 20px;
-    padding: 40px;
+    padding: 56px 40px 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     max-width: 800px;
     width: 100%;
+}
+
+.signature-image {
+    display: block;
+    width: 80px;
+    max-width: 26vw;
+    height: auto;
 }
 
 h1 {
@@ -171,6 +179,55 @@ button {
     font-size: 0.9em;
 }
 
+.finger-mapping-details {
+    margin-top: 20px;
+}
+
+.finger-mapping-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    line-height: 0;
+}
+
+.corner-github-link {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 2;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 9px;
+}
+
+.github-link:focus-visible {
+    outline: 2px solid #28378f;
+    outline-offset: 2px;
+}
+
+.github-logo {
+    width: 26px;
+    height: 26px;
+    color: #111;
+}
+
+.signature-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .finger-guide {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -198,4 +255,18 @@ button {
 .finger-name {
     font-weight: bold;
     color: #28378f;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 62px 22px 14px;
+    }
+
+    .corner-github-link {
+        right: 22px;
+    }
+
+    .signature-image {
+        width: 72px;
+    }
 }
