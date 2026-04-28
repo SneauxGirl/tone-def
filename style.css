@@ -20,7 +20,7 @@ body {
     border-radius: 20px;
     padding: 56px 40px 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    max-width: 800px;
+    max-width: 1040px;
     width: 100%;
 }
 
@@ -199,6 +199,7 @@ button {
     justify-content: center;
     border-radius: 999px;
     line-height: 0;
+    background: #fff;
 }
 
 .corner-github-link {
@@ -206,9 +207,7 @@ button {
     top: 20px;
     right: 40px;
     z-index: 2;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 9px;
+    padding: 0;
 }
 
 .github-link:focus-visible {
@@ -219,7 +218,7 @@ button {
 .github-logo {
     width: 26px;
     height: 26px;
-    color: #111;
+    color: #000;
 }
 
 .signature-footer {

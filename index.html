@@ -17,20 +17,7 @@
             aria-label="Open Tone Def on GitHub"
             title="Open Tone Def on GitHub"
         >
-            <svg
-                class="github-logo"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-            >
-                <path d="M9 19c-4 1.2-4-2-6-2"></path>
-                <path d="M15 22v-3.1a3.3 3.3 0 00-.9-2.6c3 0 6-1.4 6-6.4A5 5 0 0019 6.7 4.6 4.6 0 0019 3s-1.2-.4-4 1.5a13.8 13.8 0 00-6 0C6.2 2.6 5 3 5 3a4.6 4.6 0 000 3.7A5 5 0 003 9.9c0 5 3 6.4 6 6.4a3.3 3.3 0 00-.9 2.6V22"></path>
-            </svg>
+            <img src="images/GitHub_Invertocat_Black.svg" alt="GitHub Invertocat logo" class="github-logo">
         </a>
         <h1>Tone Def</h1>
         <div class="subtitle">Learn code fingering with tonal feedback</div>
@@ -55,7 +42,17 @@
             <div class="next-strings" id="nextStrings"></div>
             <div class="feedback" id="feedback"></div>
         </div>
-        <input type="text" id="mobileInput" style="position: absolute; opacity: 0; pointer-events: none;" />
+        <input
+            type="text"
+            id="mobileInput"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            inputmode="none"
+            aria-hidden="true"
+            style="position: absolute; opacity: 0; pointer-events: none;"
+        />
         <div class="controls">
             <button class="btn-primary" id="startBtn">Start Practice</button>
             <button class="btn-secondary" id="pinkyBtn">Right Pinky Drill</button>
