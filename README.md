@@ -6,6 +6,10 @@ Created using Claude to meet my personal desire for code-centric typing practice
 
 ![Tone Def Screenshot](images/tone-def.png)
 
+## 🚀 Live Demo
+
+[Practice Your Code Typing →](https://tone-def-gamma.vercel.app)
+
 ## How to Use (Outside Vercel)
 
 1. Download repository and extract 
